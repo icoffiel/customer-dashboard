@@ -14,6 +14,18 @@ The `customer` topic is a stream of individual customers and is compacted meanin
 
 A Global KTable is created that stores the customer data and allows access across partitions
 
+## Running
+
+1. Startup Kafka
+    ```shell
+    cd .docker
+    docker-compose up -d
+    ```
+
+2. Run the application. The following uses an IntelliJ configuration. It's important to set the `server.port` if you want to run more than 1 instance
+
+   ![](.docs/images/Run_Configurations.png)
+
 ## Issues
 
 ```

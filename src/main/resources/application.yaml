@@ -10,5 +10,3 @@ spring:
         application.server: localhost:${server.port}
   application:
     name: customers
-server:
-  port: 0 # Use a random port - TODO - use a gateway?
