@@ -1,0 +1,9 @@
+### Add a customer
+POST localhost:18080/customer/
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Person",
+  "email": "test@test"
+}

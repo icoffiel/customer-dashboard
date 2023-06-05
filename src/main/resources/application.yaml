@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.UUIDSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    streams:
+      replication-factor: 1 # Default is -1 but using this stack you get an error that it doesn't support -1
+      state-dir: ${java.io.tmpdir}kafka-streams${file.separator}${server.port}
+      properties:
+        application.server: localhost:${server.port}
+  application:
+    name: customers
+server:
+  port: 0 # Use a random port - TODO - use a gateway?
